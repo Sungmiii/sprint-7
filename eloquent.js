@@ -27,3 +27,27 @@ function isEven(target){
    // → false
    console.log(isEven(-2));
    // → true
+
+   //3rd solution
+   // Your code here.
+function countBs(str) {
+    let count = 0, len=str.length;
+    for(let i=0; i<len; i++){
+     if(/[B]/.test(str.charAt(i))) 
+       count++;
+    }
+    return count;
+  }
+  function countChar(mystr, char) {
+    let mycount =0, len=mystr.length;
+    let letter = char.toString();
+    for(let j=0; j<len; j++){
+    if(mystr[j]===letter)
+      mycount++;
+    }
+    return mycount;
+  }
+  console.log(countBs("BBBC"));
+  // → 3
+  console.log(countChar("kakkkkerlak", "k"));
+  // → 6
